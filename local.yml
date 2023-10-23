@@ -3,34 +3,13 @@
   become: true
 
   tasks:
-    - name: Install git
+    - name: Install useful packages
       apt:
         name: git
-
-    - name: Install tmux
-      apt:
         name: tmux
-
-    - name: Install tree
-      apt:
         name: tree
-
-    - name: Install htop
-      apt:
         name: htop
-
-    - name: Install neovim
-      apt:
         name: neovim
-
-    - name: Install cmatrix for matrix fun
-      apt:
         name: cmatrix
-
-    - name: Install disc usage tool ncdu
-      apt:
         name: ncdu
-
-    - name: Install alternative shell of fish
-      apt:
         name: fish
