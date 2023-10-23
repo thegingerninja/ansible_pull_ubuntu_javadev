@@ -2,14 +2,11 @@
   connection: local
   become: true
 
-  tasks:
-    - name: Install useful packages
+  pre_tasks:
+    - name: update repositories
       apt:
-        name: git
-        name: tmux
-        name: tree
-        name: htop
-        name: neovim
-        name: cmatrix
-        name: ncdu
-        name: fish
+        update_cache: yes
+      change_when: False
+
+  tasks:
+    - include: tasks/packages.yml

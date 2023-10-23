@@ -1,0 +1,10 @@
+- name: Install useful packages
+  apt:
+    name: git
+    name: tmux
+    name: tree
+    name: htop
+    name: neovim
+    name: cmatrix
+    name: ncdu
+    name: fish
