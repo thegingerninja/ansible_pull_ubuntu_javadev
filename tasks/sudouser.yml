@@ -5,6 +5,7 @@
     append: true
     state: present
     createhome: true
+    shell: "{{ user_shell }}"
 
 - name: "Allow {{ sudo_user }} to sudo without password"
   copy:
@@ -12,5 +13,4 @@
     content: "{{ sudo_user }} ALL=(ALL) NOPASSWD:ALL"
     owner: root
     group: root
-    shell: "{{ user_shell }}"
     mode: 0440
