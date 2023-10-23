@@ -1,0 +1,13 @@
+- name: Create my {{ sudo_user }} sudo user
+  user:
+    name: {{ sudo_user }}
+    groups: sudo
+    append: true
+    state: present
+    createhome: true
+
+- name: Allow {{ sudo_user }} to sudo without password
+  copy:
+    dest: /etc/sudoers.d/80-ansible-sudo-user
+    content: "{{ sudo_user }} ALL=(ALL) NOPASSWD:ALL"
+    mode: 0440
