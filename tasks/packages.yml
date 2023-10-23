@@ -1,10 +1,25 @@
 - name: Install useful packages
   apt:
     name: git
+    state: present
+  apt:
     name: tmux
+    state: present
+  apt:
     name: tree
+    state: present
+  apt:
     name: htop
+    state: present
+  apt:
     name: neovim
+    state: present
+  apt:
     name: cmatrix
+    state: present
+  apt:
     name: ncdu
+    state: present
+  apt:
     name: fish
+    state: present
