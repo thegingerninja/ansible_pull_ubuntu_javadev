@@ -12,4 +12,5 @@
     - include: tasks/sudouser.yml
       vars:
         sudo_user: paul
+
     - include: tasks/packages.yml
