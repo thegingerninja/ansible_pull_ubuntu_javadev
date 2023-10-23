@@ -2,24 +2,38 @@
   apt:
     name: git
     state: present
+
+- name: Install tmux
   apt:
     name: tmux
     state: present
+
+- name: Install tree
   apt:
     name: tree
     state: present
+
+- name: Install htop 
   apt:
     name: htop
     state: present
+
+- name: Install neovim 
   apt:
     name: neovim
     state: present
+
+- name: Install cmatrix 
   apt:
     name: cmatrix
     state: present
+
+- name: Install ncdu 
   apt:
     name: ncdu
     state: present
+
+- name: Install fish 
   apt:
     name: fish
     state: present
