@@ -8,6 +8,8 @@
 
 - name: "Allow {{ sudo_user }} to sudo without password"
   copy:
-    dest: /etc/sudoers.d/80-ansible-sudo-user
+    dest: /etc/sudoers.d/ansible-sudo-user
     content: "{{ sudo_user }} ALL=(ALL) NOPASSWD:ALL"
+    owner: root
+    group: root
     mode: 0440
