@@ -12,4 +12,5 @@
     content: "{{ sudo_user }} ALL=(ALL) NOPASSWD:ALL"
     owner: root
     group: root
+    shell: "{{ user_shell }}"
     mode: 0440
