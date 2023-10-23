@@ -13,3 +13,6 @@
       vars:
         sudo_user: paul
         user_shell: /bin/fish
+    - include: tasks/neovim.yml
+      vars:
+        username: paul
