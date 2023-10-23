@@ -1,6 +1,6 @@
 - name: Install neovim using snap to get latest
   snap:
-    name: neovim
+    name: nvim
     classic: yes
 
 - name: Download packer manager from github
