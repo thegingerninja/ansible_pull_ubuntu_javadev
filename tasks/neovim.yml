@@ -1,7 +1,7 @@
-- name: Install neovim 
-  apt:
+- name: Install neovim using snap to get latest
+  snap:
     name: neovim
-    state: present
+    classic: yes
 
 - name: Download packer manager from github
   become_user: "{{ username }}"
