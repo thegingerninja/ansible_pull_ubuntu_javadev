@@ -10,3 +10,8 @@
     dest: "/home/{{ username }}/.local/share/nvim/site/pack/packer/start/packer.nvim"
     depth: 1
 
+- name: load neovim config from git repo
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/thegingerninja/nvim-conf
+    dest: "/home/{{ username }}/.config/nvim"
