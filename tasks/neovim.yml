@@ -3,6 +3,18 @@
     name: nvim
     classic: yes
 
+- name: Install TTF Hack Nerd font
+  apt:
+    name: ttf-hack-nerd
+
+- name: Install TTF IOSevka Nerd font
+  apt:
+    name: ttf-iosevka-nerd
+
+- name: Install TTF Ubuntu Mono Nerd font
+  apt:
+    name: ttf-ubuntu-mono-nerd
+
 - name: Download packer manager from github
   become_user: "{{ username }}"
   ansible.builtin.git:
