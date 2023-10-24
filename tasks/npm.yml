@@ -1,0 +1,9 @@
+- name: Install NodeJS
+  apt:
+    name: nodejs
+    state: present
+
+- name: Install tsserver
+  community.general.npm:
+    name: typescript-language-server
+    global: true

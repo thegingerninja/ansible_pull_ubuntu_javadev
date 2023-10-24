@@ -16,3 +16,4 @@
     - include: tasks/neovim.yml
       vars:
         username: paul
+    - include: tasks/npm.yml
