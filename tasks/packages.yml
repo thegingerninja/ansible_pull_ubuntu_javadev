@@ -37,3 +37,8 @@
   apt:
     name: fish
     state: present
+
+- name: Install Unzip
+  apt:
+    name: unzip
+    state: present

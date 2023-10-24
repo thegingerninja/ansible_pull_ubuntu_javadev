@@ -3,17 +3,39 @@
     name: nvim
     classic: yes
 
+- name: Ensure fonts directory
+  file:
+    path: "/home/{{ username }}/.fonts"
+    state: directory
+
 - name: Install TTF Hack Nerd font
-  apt:
-    name: ttf-hack-nerd
+  become_user: "{{ username }}"
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
+    dest: "/home/{{ username }}/.fonts/"
+    remote_src: yes
 
 - name: Install TTF IOSevka Nerd font
-  apt:
-    name: ttf-iosevka-nerd
+  become_user: "{{ username }}"
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Iosevka.zip
+    dest: "/home/{{ username }}/.fonts/"
+    remote_src: yes
+
+- name: Install FiraCode Nerd font
+  become_user: "{{ username }}"
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
+    dest: "/home/{{ username }}/.fonts/"
+    remote_src: yes
 
 - name: Install TTF Ubuntu Mono Nerd font
-  apt:
-    name: ttf-ubuntu-mono-nerd
+  become_user: "{{ username }}"
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/UbuntuMono.zip
+    dest: "/home/{{ username }}/.fonts/"
+    remote_src: yes
+
 
 - name: Download packer manager from github
   become_user: "{{ username }}"
