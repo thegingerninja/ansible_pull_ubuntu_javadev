@@ -21,7 +21,7 @@
 - name: Enable the Gnome Desktop manager service
   ansible.builtin.service:
     name: gdm
-    enable: yes
+    state: started
 
 - name: Enable the Spice service
   ansible.builtin.service:
