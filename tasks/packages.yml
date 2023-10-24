@@ -3,6 +3,11 @@
     name: git
     state: present
 
+- name: Build Essentials for compilers
+  apt:
+    name: build-essential
+    state: present
+
 - name: Install tmux
   apt:
     name: tmux
