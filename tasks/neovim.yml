@@ -3,7 +3,9 @@
     name: nvim
     classic: yes
 
+
 - name: Ensure fonts directory
+  become_user: "{{ username }}"
   file:
     path: "/home/{{ username }}/.fonts"
     state: directory
