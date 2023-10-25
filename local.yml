@@ -21,3 +21,6 @@
     - include: tasks/java.yml
       vars:
         username: paul
+    - include: tasks/terminator.yml
+      vars:
+        username: paul

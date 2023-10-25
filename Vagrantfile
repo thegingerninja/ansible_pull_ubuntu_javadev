@@ -19,5 +19,7 @@ Vagrant.configure('2') do |config|
       libvirt.channel type: 'unix', target_name: 'org.qemu.guest_agent.0', target_type: 'virtio'
       libvirt.channel type: 'spicevmc', target_name: 'com.redhat.spice.0', target_type: 'virtio'
     end
+
+    subconfig.vm.provision :shell, path: "provision.sh"
   end
 end
