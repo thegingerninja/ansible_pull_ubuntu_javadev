@@ -24,3 +24,4 @@
     - include: tasks/terminator.yml
       vars:
         username: paul
+    - include: tasks/hackertools.yml
