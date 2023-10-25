@@ -4,14 +4,14 @@
     path: "/home/{{ username }}/Downloads"
     state: directory
 
-- name: Download and unarchive the Eclipse Installer into Downloads.
-  become_user: "{{ username }}"
-  vars:
-    eclipse_url: "https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2023-09/R/eclipse-inst-jre-linux64.tar.gz&mirror_id=1156"
-  ansible.builtin.unarchive:
-    src: "{{ eclipse_url }}"
-    dest: "/home/{{ username }}/Downloads/"
-    remote_src: yes
+# - name: Download and unarchive the Eclipse Installer into Downloads.
+#   become_user: "{{ username }}"
+#   vars:
+#     eclipse_url: "https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2023-09/R/eclipse-inst-jre-linux64.tar.gz&mirror_id=1156"
+#   ansible.builtin.unarchive:
+#     src: "{{ eclipse_url }}"
+#     dest: "/home/{{ username }}/Downloads/"
+#     remote_src: yes
 
 - name: Install Maven for Java projects
   apt:
