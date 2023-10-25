@@ -1,5 +1,8 @@
-
-
+- name: Ensure Downloads directory
+  become_user: "{{ username }}"
+  file:
+    path: "/home/{{ username }}/Downloads"
+    state: directory
 
 - name: Download and unarchive the Eclipse Installer into Downloads.
   become_user: "{{ username }}"
@@ -14,4 +17,3 @@
   apt:
     name: maven
     state: present
-
