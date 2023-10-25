@@ -1,16 +1,12 @@
+- name: Install Snap core to allow Snap to work on Debian
+  snap:
+    name: core
+    state: present
+
 - name: Install neovim using snap to get latest
   snap:
     name: nvim
     classic: yes
-  when:
-    - ansible_facts['distribution'] == "Ubuntu"
-
-- name: Install neovim using apt
-  apt:
-    name: neovim
-  when:
-    - ansible_facts['distribution'] == "Debian"
-
 
 - name: Ensure fonts directory
   become_user: "{{ username }}"

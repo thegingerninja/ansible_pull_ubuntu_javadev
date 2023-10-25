@@ -3,8 +3,8 @@
 
 Vagrant.configure('2') do |config|
   config.vm.define 'vagrant1' do |subconfig|
-    subconfig.vm.box = 'generic/ubuntu2204'
-    # subconfig.vm.box = 'generic/debian12'
+    # subconfig.vm.box = 'generic/ubuntu2204'
+    subconfig.vm.box = 'generic/debian12'
     subconfig.vm.hostname = 'general'
     subconfig.vm.box_check_update = false
     subconfig.vm.network 'public_network', bridge: 'nm-bridge', dev: 'nm-bridge'
