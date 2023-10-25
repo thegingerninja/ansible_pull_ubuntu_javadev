@@ -18,3 +18,4 @@
         username: paul
     - include: tasks/npm.yml
     - include: tasks/gnome.yml
+    - include: tasks/java.yml
