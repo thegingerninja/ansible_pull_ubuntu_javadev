@@ -21,6 +21,7 @@
     - include: tasks/java.yml
       vars:
         username: paul
+        jdk_version: 21
     - include: tasks/terminator.yml
       vars:
         username: paul
