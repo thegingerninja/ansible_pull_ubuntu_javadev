@@ -51,3 +51,7 @@
   apt:
     name: flameshot
 
+- name: Install NeoFetch
+  apt:
+    name: neofetch
+
