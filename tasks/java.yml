@@ -4,12 +4,12 @@
     path: "/home/{{ username }}/Downloads"
     state: directory
 
-- name: Install the full open jdk package
-  apt:
-    name: "openjdk-{{ jdk_version }}-jdk --fix-missing"
-    state: present
-
-- name: Install Maven for Java projects
-  apt:
-    name: maven
-    state: present
+# - name: Install the full open jdk package
+#   apt:
+#     name: "openjdk-{{ jdk_version }}-jdk --fix-missing"
+#     state: present
+#
+# - name: Install Maven for Java projects
+#   apt:
+#     name: maven
+#     state: present
