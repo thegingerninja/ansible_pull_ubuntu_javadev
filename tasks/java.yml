@@ -6,7 +6,7 @@
 
 - name: Install the full open jdk package
   apt:
-    name: "openjdk-{{ jdk_version }} --fix-missing"
+    name: "openjdk-{{ jdk_version }}-jdk --fix-missing"
     state: present
 
 - name: Install Maven for Java projects
